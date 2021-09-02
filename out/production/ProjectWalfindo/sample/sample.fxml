@@ -1,0 +1,43 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <TableView fx:id="coursusT" GridPane.rowIndex="0" GridPane.columnIndex="0" prefWidth="650">
+        <columns>
+            <TableColumn text="NIK" fx:id="nikC"></TableColumn>
+            <TableColumn text="Nama" fx:id="namaC"></TableColumn>
+            <TableColumn text="Coupon" fx:id="couponC"></TableColumn>
+            <TableColumn text="Coursus" fx:id="coursusC"></TableColumn>
+            <TableColumn text="Jenis Kelamin" fx:id="jkC"></TableColumn>
+            <TableColumn text="Tanggal Masuk" fx:id="tmC"></TableColumn>
+            <TableColumn text="Tanggal Keluar" fx:id="tkC"></TableColumn>
+        </columns>
+    </TableView>
+    <Label text="NIK :" GridPane.rowIndex="1" GridPane.columnIndex="0"></Label>
+    <TextField fx:id='InputNIK' GridPane.rowIndex="2" GridPane.columnIndex="0" ></TextField>
+    <Label text="Nama :" GridPane.rowIndex="3" GridPane.columnIndex="0"></Label>
+    <TextField fx:id="InputNAMA" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+    <Label text="Coupon :" GridPane.rowIndex="5" GridPane.columnIndex="0"></Label>
+    <TextField fx:id="InputCoupon" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+    <Label text="Coursus :" GridPane.rowIndex="7" GridPane.columnIndex="0"></Label>
+    <TextField fx:id="InputCoursus" GridPane.rowIndex="8" GridPane.columnIndex="0" />
+    <Label text="Jenis Kelamin :" GridPane.rowIndex="9" GridPane.columnIndex="0"></Label>
+    <fx:define>
+        <ToggleGroup fx:id="jk"></ToggleGroup>
+    </fx:define>
+    <RadioButton fx:id="lk" text="Laki Laki" toggleGroup="$jk" GridPane.rowIndex="10" GridPane.columnIndex="0"></RadioButton>
+    <RadioButton fx:id="pr" text="Perempuan" toggleGroup="$jk" GridPane.rowIndex="11" GridPane.columnIndex="0"></RadioButton>
+    <Label text="Tanggal Masuk :" GridPane.rowIndex="12" GridPane.columnIndex="0"></Label>
+    <TextField fx:id="InputMasuk" GridPane.rowIndex="13" GridPane.columnIndex="0" />
+    <Label text="Tanggal Keluar :" GridPane.rowIndex="14" GridPane.columnIndex="0"></Label>
+    <TextField fx:id="InputKeluar" GridPane.rowIndex="15" GridPane.columnIndex="0" />
+    <Button text="Simpan" GridPane.rowIndex="16" GridPane.columnIndex="0" onAction="#Simpan"></Button>
+</GridPane>
